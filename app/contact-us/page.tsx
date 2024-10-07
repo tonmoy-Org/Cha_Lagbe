@@ -3,13 +3,13 @@ import { Typography, Container, Grid, Paper } from '@mui/material';
 
 const Contact: React.FC = () => {
     return (
-        <Container maxWidth="lg" sx={{ mt: 10, mb: 4, height: '100vh' }}>
+        <Container maxWidth="lg" sx={{ mt: 10, mb: 4, height: { md: '100vh' } }}>
             <Typography variant="h4" component="h1" align="center" sx={{ mb: 4, fontWeight: 'bold', color: '#008e48' }}>
                 আমাদের সাথে যোগাযোগ করুন
             </Typography>
             <Grid container spacing={3}>
                 <Grid item xs={12} md={6}>
-                    <Paper elevation={3} sx={{ p: 3, height: 500 }}>
+                    <Paper elevation={3} sx={{ p: 3, height: { md: 500 } }}>
                         <Typography variant="h5" component="h2" sx={{ mb: 2 }}>
                             আমাদের ঠিকানা
                         </Typography>
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
                     </Paper>
                 </Grid>
                 <Grid item xs={12} md={6}>
-                    <Paper elevation={3} sx={{ p: 3, height: 500 }}>
+                    <Paper elevation={3} sx={{ p: 3, height: { md: 500 } }}>
                         <Typography variant="h5" component="h2" sx={{ mb: 2 }}>
                             আমাদের মানচিত্র
                         </Typography>
