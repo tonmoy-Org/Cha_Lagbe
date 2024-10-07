@@ -23,7 +23,7 @@ interface Props {
   window?: () => Window;
 }
 
-const drawerWidth = 300;
+const drawerWidth = 240;
 
 const navItems = [
   { name: 'হোম', path: '/' },
