@@ -49,10 +49,8 @@ export default function HeroSection() {
                         color: 'white',
                         textShadow: '2px 2px 8px rgba(0, 0, 0, 0.7)',
                         fontSize: { xs: '2rem', sm: '2rem', md: '3rem' },
-                        width: { xs: 250, lg: '100%' },
-                        mx: 'auto'
                     }}>
-                        বাংলাদেশের সেরা চা
+                        বাংলাদেশের <br className='lg:hidden' /> সেরা চা
                     </Typography>
                 </motion.div>
 
