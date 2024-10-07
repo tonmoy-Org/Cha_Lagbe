@@ -23,7 +23,7 @@ interface Props {
   window?: () => Window;
 }
 
-const drawerWidth = 240;
+const drawerWidth = 300;
 
 const navItems = [
   { name: 'হোম', path: '/' },
@@ -79,7 +79,6 @@ export default function DrawerAppBar(props: Props) {
         }}
       >
         <Toolbar>
-          {/* Logo and brand name for both mobile and desktop view */}
           <Box sx={{ display: 'flex', alignItems: 'center', flexGrow: 1 }}>
             <Image
               src={logo}
@@ -110,8 +109,6 @@ export default function DrawerAppBar(props: Props) {
           >
             <MenuIcon />
           </IconButton>
-
-          {/* Navigation items for larger screens */}
           <Box sx={{ display: { xs: 'none', sm: 'block' }, textShadow: 10 }}>
             {navItems.map((item) => (
               <Button
@@ -119,10 +116,10 @@ export default function DrawerAppBar(props: Props) {
                 sx={{
                   color: '#008e48',
                   fontWeight: 600,
-                  fontSize: '1.1rem',
+                  fontSize: '1rem',
                   transition: 'color 0.3s ease',
                   '&:hover': {
-                    color: '#76ff03', // Bright green on hover
+                    color: '#76ff03', 
                   },
                 }}
                 onClick={() => handleNavigation(item.path)}
@@ -134,17 +131,16 @@ export default function DrawerAppBar(props: Props) {
         </Toolbar>
       </AppBar>
 
-      {/* Drawer for mobile view */}
       <nav>
         <Drawer
           container={container}
           variant="temporary"
           open={mobileOpen}
-          onClose={handleDrawerToggle}  // Close drawer when clicking outside
+          onClose={handleDrawerToggle}
           ModalProps={{
-            keepMounted: true, // Improves performance for mobile
+            keepMounted: true,
           }}
-          anchor="right" // Drawer opens from the right
+          anchor="right" 
           sx={{
             display: { xs: 'block', sm: 'none' },
             '& .MuiDrawer-paper': {
